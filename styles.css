@@ -1,0 +1,12 @@
+td {
+  width: 1em;
+  height: 1em;
+  border-color: #EEEEEE;
+}
+td.alive {
+  background-color: blue;
+}
+td.focused {
+  border-color: red;
+  border-color: red;
+}

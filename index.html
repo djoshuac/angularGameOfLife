@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game of Life</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+  <div ng-app="angularLifeApp">
+    <div ng-controller="lifeController">
+      <table border="1">
+        <tr ng-repeat="row in board track by $index">
+          <td ng-repeat="cell in row track by $index"
+            ng-class="{'alive': cell, 'focused': isFocused($parent.$index, $index)}"
+            ng-click="setLife($parent.$index, $index, 1)"></td>
+        </tr>
+      </table>
+
+      <button ng-click="nextGeneration()">Next</button>
+    </div>
+  </div>
+
+  <script src="scripts/angularLifeApp.js"></script>
+</head>
+</html>
